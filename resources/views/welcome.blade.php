@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <!-- Fonts -->
-        {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
-
-
         {{-- import header --}}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +8,11 @@
         <title>OST</title>
         <link rel="shortcut icon" href="{{ asset('image/favicon.png" type="image/x-icon') }}">
         <!-- Bootstrap , fonts & icons  -->
-        <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+        <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('fonts/icon-font/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('fonts/typography-font/typo.css') }}">
-        <link rel="stylesheet" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.css') }}">
+        <link rel="stylesheet" href="{{ asset('fonts/font-awesome-5/css/all.css') }}">
         <!-- Plugin'stylesheets  -->
         <link rel="stylesheet" href="{{ asset('plugins/aos/aos.min.css') }}">
         <link rel="stylesheet" href="{{ asset('plugins/fancybox/jquery.fancybox.min.css') }}">
@@ -140,10 +136,10 @@
                         </div>
                         <div class="header-btns header-btn-devider ml-auto pr-2 ml-lg-6 d-none d-xs-flex">
                             <a class="btn btn-transparent text-uppercase font-size-3 heading-default-color focus-reset"
-                                href="javacript:" data-toggle="modal" data-target="#login">
+                            href="{{ route('login') }}" data-toggle="modal" data-target="#login">
                                 Log in
                             </a>
-                            <a class="btn btn-primary text-uppercase font-size-3" href="javacript:" data-toggle="modal"
+                            <a class="btn btn-primary text-uppercase font-size-3" href="{{ route('register') }}" data-toggle="modal"
                                 data-target="#signup">
                                 Sign up
                             </a>
@@ -167,7 +163,7 @@
     
     
             <!-- Login Modal -->
-            <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
+            {{-- <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog max-width-px-840 position-relative">
                     <button type="button"
                         class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper"
@@ -231,10 +227,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
     
             <!-- Sign Up Modal -->
-            <div class="modal fade form-modal" id="signup" tabindex="-1" aria-hidden="true">
+            {{-- <div class="modal fade form-modal" id="signup" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog max-width-px-840 position-relative">
                     <button type="button"
                         class="circle-32 btn-reset bg-white pos-abs-tr mt-n6 mr-lg-n6 focus-reset shadow-10"
@@ -309,7 +305,7 @@
                     
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Header start end -->
     
     
@@ -332,7 +328,6 @@
                         </div>
                     </div>
                     <!-- End Section title -->
-    
                     <!-- 3 ngon ngu -->
                     <!-- Services Content -->
                     <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
@@ -341,7 +336,7 @@
                             <div class="px-xl-7 px-xxl-12 pt-5 pb-3 pb-lg-9 text-center">
                                 <div
                                     class="square-92 rounded-4 bg-dodger text-white font-size-8 mx-auto shadow-dodger mb-11">
-                                    <img src="./image/svg/shoot.svg" alt="">
+                                    <img src="{{asset('image/svg/shoot.svg')}}" alt="a">
                                 </div>
                                 <div class="services-content">
                                     <h3 class="font-size-6 mb-7"><a href="{{ url('/find') }}">
@@ -355,7 +350,7 @@
                         <div class="col-12 col-lg-4 col-md-6 col-sm-8 col-xs-8">
                             <div class="px-xl-7 px-xxl-12 pt-5 pb-3 pb-lg-9 text-center">
                                 <div class="square-92 rounded-4 bg-green text-white font-size-8 mx-auto shadow-green mb-11">
-                                    <img src="./image/svg/user.svg" alt="">
+                                    <img src="./image/svg/user.svg" alt="a">
                                 </div>
                                 <div class="services-content">
                                     <h3 class="font-size-6 mb-7"><a href="{{ url('/find') }}">
@@ -370,7 +365,7 @@
                             <div class="px-xl-7 px-xxl-12 pt-5 pb-3 pb-lg-9 text-center">
                                 <div
                                     class="square-92 rounded-4 bg-casablanca text-white font-size-8 mx-auto shadow-casablanca mb-11">
-                                    <img src="./image/svg/heart.svg" alt="">
+                                    <img src="./image/svg/heart.svg" alt="a">
                                 </div>
                                 <div class="services-content">
                                     <h3 class="font-size-6 mb-7"><a href="{{ url('/find') }}">
@@ -486,7 +481,7 @@
                                         <li>
                                             <a href="#"
                                                 class="bg-regent-opacity-15 text-denim font-size-3 rounded-3 min-width-px-100 px-3 flex-all-center mr-6 h-px-33 mt-4">
-                                                <i class="icon icon-pin-3 mr-2 font-weight-bold"></i> KyotoKyoto
+                                                <i class="icon icon-pin-3 mr-2 font-weight-bold"></i> Kyoto
                                             </a>
                                         </li>
                                         <li>
@@ -526,6 +521,7 @@
         </div>
         <!-- Vendor Scripts -->
         <script src="{{ asset('js/vendor.min.js') }}"></script>
+        `
         <!-- Plugin's Scripts -->
         <script src="{{ asset('plugins/fancybox/jquery.fancybox.min.js') }}"></script>
         <script src="{{ asset('plugins/nice-select/jquery.nice-select.min.js') }}"></script>
@@ -535,7 +531,7 @@
         <script src="{{ asset('plugins/counter-up/jquery.waypoints.min.js') }}"></script>
         <script src="{{ asset('plugins/ui-range-slider/jquery-ui.js') }}"></script>
         <!-- Activation Script -->
-        <!-- <script src="js/drag-n-drop.js"></script> -->
+        <script src="{{asset('js/drag-n-drop.js')}}"></script>
         <script src="{{ asset('js/custom.js') }}"></script>
     </body>
 </html>
