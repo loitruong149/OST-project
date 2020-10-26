@@ -13,6 +13,7 @@ class TestTableSeeder extends Seeder
      */
     public function run()
     {
+        factory(App\Model\Jobdetail::class, 15)->create();
         //
         User::create([
             'name' => 'admin',
@@ -35,5 +36,7 @@ class TestTableSeeder extends Seeder
             'phone' =>'123456789',
             'class' => '2'
         ]);
+
+
     }
 }
