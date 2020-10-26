@@ -1,0 +1,24 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                    <div class="content">
+                        <h1>List job</h1>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="{{ url('/find_job/job_content') }}">Job 1</a></li>
+                            <li><a href="{{ url('/find_job/job_content') }}">Job 2</a></li>
+                            <li><a href="{{ url('/find_job/job_content') }}">Job 3</a></li>
+                            <li><a href="{{ url('/find_job/job_content') }}">Job 4</a></li>
+                            <li><a href="{{ url('/find_job/job_content') }}">Job 5</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
