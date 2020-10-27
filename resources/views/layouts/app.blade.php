@@ -50,7 +50,7 @@
                             <div class="navbar-nav-wrapper">
                                 <ul class="navbar-nav main-menu">
                                     <li class="nav-item dropdown active">
-                                        <a class="nav-link dropdown-toggle gr-toggle-arrow" id="navbarDropdown" href="#"
+                                        <a class="nav-link dropdown-toggle gr-toggle-arrow" id="navbarDropdown" href="{{ route('homepage') }}"
                                             role="button" data-toggle="dropdown" aria-haspopup="true"
                                             aria-expanded="false">
                                             Home </a>
@@ -86,22 +86,22 @@
                                             お仕事探し <i class="fa fa-chevron-down"></i></a>
                                         <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown2">
                                             <li class="drop-menu-item">
-                                                <a href="./page1.html">
+                                                <a href="{{url('find_job/job_content')}}">
                                                     Thực Tập Sinh
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="./page2.html">
+                                                <a href="{{url('find_job/job_content')}}">
                                                     Kỹ Sư
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="./page3.html">
+                                                <a href="{{url('find_job/job_content')}}">
                                                     Kỹ Năng Đặc Định
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="./page4.html">
+                                                <a href="{{url('find_job/job_content')}}">
                                                     Điều Dưỡng
                                                 </a>
                                             </li>
@@ -114,22 +114,22 @@
                                             ご求人探し <i class="fa fa-chevron-down"></i></a>
                                         <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown2">
                                             <li class="drop-menu-item">
-                                                <a href="./page1.html">
+                                                <a href="{{url('find_engineer/find')}}">
                                                     実習生
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="./page1.html">
+                                                <a href="{{url('find_engineer/find')}}">
                                                     エンジニア
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="./page1.html">
+                                                <a href="{{url('find_engineer/find')}}">
                                                     特定技能
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="./page1.html">
+                                                <a href="{{url('find_engineer/find')}}">
                                                     介護
                                                 </a>
                                             </li>
@@ -145,25 +145,25 @@
                         </div>
                         <div class="header-btns header-btn-devider ml-auto pr-2 ml-lg-6 d-none d-xs-flex">
                             <a class="btn btn-transparent text-uppercase font-size-3 heading-default-color focus-reset"
-                                href="{{ route('login') }}" data-toggle=" modal" data-target="#login">
+                                href="{{ route('login') }}" data-target="#login">
                                 Log in
                             </a>
                             <a class="btn btn-primary text-uppercase font-size-3" href="{{ route('register') }}"
-                                data-toggle="modal" data-target="#signup">
+                                data-target="#signup">
                                 Sign up
                             </a>
                         </div>
                         <!-- Mobile Menu Hamburger-->
-                        <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button"
+                        {{-- <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button"
                             data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu"
                             aria-expanded="false" aria-label="Toggle navigation">
-                            <!-- <i class="icon icon-simple-remove icon-close"></i> -->
+                            <i class="icon icon-simple-remove icon-close"></i> 
                             <span class="hamburger hamburger--squeeze js-hamburger">
                                 <span class="hamburger-box">
                                     <span class="hamburger-inner"></span>
                                 </span>
                             </span>
-                        </button>
+                        </button> --}}
                         <!--/.Mobile Menu Hamburger Ends-->
                     </nav>
                 </div>

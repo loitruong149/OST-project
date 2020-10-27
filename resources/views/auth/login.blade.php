@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="height: 650px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -64,9 +64,16 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <a href="{{ route('loginFacebook' )}}">Login Facebook</a></br>
-                            <a href="{{ route('loginGoogle' )}}">Login Google</a>
+                        <div style="margin-top: 20px;">
+                            <div class="row justify-content-center">Sign Up with social media</div>
+                            <div class="row justify-content-center">
+                                <a href="{{ route('loginFacebook' )}}">
+                                    <i class="fab fa-facebook"></i>
+                                    Login Facebook</a></br>
+                                <a href="{{ route('loginGoogle' )}}" style="margin-left: 30px;">
+                                    <i class="fab fa-google"></i>
+                                    Login Google</a>
+                            </div>
                         </div>
                     </form>
                 </div>
