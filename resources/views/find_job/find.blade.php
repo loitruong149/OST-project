@@ -78,12 +78,12 @@
                         </div>
                         <!-- End Single Featured Job -->
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center pt-md-11 ">
-                        <a class="text-green font-weight-bold text-uppercase font-size-3" href="#">See more
-                            <i class="fas fa-arrow-right ml-3"></i>
-                        </a>
+                    <div class="row">
+                        <div class="col-12 text-center pt-md-11 ">
+                            <a class="text-green font-weight-bold text-uppercase font-size-3" href="#">See more
+                                <i class="fas fa-arrow-right ml-3"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
