@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Model\Jobtype;
+use \App\Model\Jobdetail;
 
 class JobController extends Controller
 {
@@ -15,6 +15,8 @@ class JobController extends Controller
     public function index()
     {
         //
+        $jobdetail = Jobdetail::all();
+        return view('welcome')->with('jobdetail', $jobdetail);
         
     }
 
@@ -82,5 +84,10 @@ class JobController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function apply(Request $request)
+    {
+        # code...
     }
 }

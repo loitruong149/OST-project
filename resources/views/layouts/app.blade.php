@@ -80,22 +80,22 @@
                                             お仕事探し <i class="fa fa-chevron-down"></i></a>
                                         <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown2">
                                             <li class="drop-menu-item">
-                                                <a href="{{url('find_job/job_content')}}">
+                                                <a href="{{url('find_job/list_job')}}">
                                                     Thực Tập Sinh
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="{{url('find_job/job_content')}}">
+                                                <a href="{{url('find_job/list_job')}}">
                                                     Kỹ Sư
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="{{url('find_job/job_content')}}">
+                                                <a href="{{url('find_job/list_job')}}">
                                                     Kỹ Năng Đặc Định
                                                 </a>
                                             </li>
                                             <li class="drop-menu-item">
-                                                <a href="{{url('find_job/job_content')}}">
+                                                <a href="{{url('find_job/list_job')}}">
                                                     Điều Dưỡng
                                                 </a>
                                             </li>

@@ -11,9 +11,10 @@
 |
 */
 //trang chu
-Route::get('/', function () {
-    return view('welcome');
-})->name('homepage');
+Route::get('/', 'JobController@index')->name('homepage');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('homepage');
 
 //link den cac trang tim viec, tim ky su(chua viet controller)
 Route::get('/find', function () {return view('find');});
@@ -25,7 +26,7 @@ Route::get('/find_job/list_job', function () {return view('find_job/list_job');}
 Route::get('/find_job/job_content', function () {return view('find_job/job_content');});
 
 //xu ly apply job(chua viet controller, tam thoi cho route la register)
-Route::post('/register', function () {return "dang xu ly";});
+Route::post('/apply', 'JobController@apply')->name('apply');
 
 
 
