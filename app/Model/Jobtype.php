@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Jobtype extends Model
 {
     //
+    // protected $with = ['jobdetails'];
+
     protected $fillable =[
         'name',
     ];
-    public function jobdetail(){
-        $this->hasOne('App\Model\Jobdetail');
+    public function jobdetails(){
+        return $this->hasMany(Jobdetail::class,'jobtype_id','id');
     }
 }

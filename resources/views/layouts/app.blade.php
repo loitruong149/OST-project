@@ -79,27 +79,19 @@
                                             aria-expanded="false">
                                             お仕事探し <i class="fa fa-chevron-down"></i></a>
                                         <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown2">
+
+
+                                            @foreach ($header as $item)
                                             <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Thực Tập Sinh
+                                                <a href="/find_job/list_job/{{$item->id}}">
+                                                    {{$item->name}}
                                                 </a>
                                             </li>
-                                            <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Kỹ Sư
-                                                </a>
-                                            </li>
-                                            <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Kỹ Năng Đặc Định
-                                                </a>
-                                            </li>
-                                            <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Điều Dưỡng
-                                                </a>
-                                            </li>
+                                            @endforeach
                                         </ul>
+
+
+
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle gr-toggle-arrow" id="navbarDropdown2"

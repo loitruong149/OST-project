@@ -37,10 +37,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    protected function authenticated(Request $request, $user)
-    {
-        //
-        Auth::
+    public function showLoginForm(){
+        return $this->returnWithHearderData('auth.login',[
+
+        ]);
     }
     
 }

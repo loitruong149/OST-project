@@ -24,7 +24,6 @@
         <!-- Custom stylesheet -->
     </head>
     <body>
-
         {{-- import body --}}
         <div class="site-wrapper overflow-hidden ">
             <!-- Header start  -->
@@ -76,26 +75,13 @@
                                             aria-expanded="false">
                                             お仕事探し <i class="fa fa-chevron-down"></i></a>
                                         <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown2">
+                                            @foreach ($jobtype as $item)
                                             <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Thực Tập Sinh
+                                                <a href="find_job/list_job/{{$item->id}}">
+                                                    {{$item->name}}
                                                 </a>
                                             </li>
-                                            <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Kỹ Sư
-                                                </a>
-                                            </li>
-                                            <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Kỹ Năng Đặc Định
-                                                </a>
-                                            </li>
-                                            <li class="drop-menu-item">
-                                                <a href="{{url('find_job/list_job')}}">
-                                                    Điều Dưỡng
-                                                </a>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -226,14 +212,19 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8 col-lg-6 col-xxl-5">
                             <div class="text-center mb-8 mb-lg-18 px-xl-9 px-xxl-7">
-                                <h2 class="font-size-9 mb-6">New Job</h2>
-                            </div>
+                                <h2 class="font-size-9 mb-6">
+                                    @foreach ($job_engineer as $item)
+                                    {{strtoupper($item->name)}} Job</h2>
+                                    @endforeach
+                                </div>
                         </div>
                     </div>
                     <!-- End Section title -->
                     <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">                    
                         
-                        @foreach ($jobdetail as $item)
+                        @foreach ($job_engineer as $item)
+                        @foreach ($item->jobdetails as $jobdetail)
+                        
                         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-11 mb-9">
                             <!-- Single Featured Job -->
                             <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3">
@@ -244,7 +235,7 @@
                                     <div>
                                         <a href="#" class="font-size-3 text-default-color line-height-2">Job 1</a>
                                         <h3 class="font-size-6 mb-0"><a class="heading-default-color font-weight-semibold"
-                                        href="#">{{$item->name}}</a></h3>
+                                        href="#">{{$jobdetail->name}}</a></h3>
                                         </div>
                                     </div>
                                     <div class="d-flex pt-17">
@@ -269,6 +260,7 @@
                     </div>
                     <!-- End Single Featured Job -->
                 </div>
+                @endforeach
                 @endforeach
                     </div>
                     <div class="row">
