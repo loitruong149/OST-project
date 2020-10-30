@@ -80,14 +80,15 @@
                                             お仕事探し <i class="fa fa-chevron-down"></i></a>
                                         <ul class="gr-menu-dropdown dropdown-menu" aria-labelledby="navbarDropdown2">
 
-
-                                            @foreach ($header as $item)
+                                            @if (is_array($header ?? '') || is_object($header ?? ''))
+                                            @foreach ($header ?? '' ?? '' as $item)
                                             <li class="drop-menu-item">
                                                 <a href="/find_job/list_job/{{$item->id}}">
                                                     {{$item->name}}
                                                 </a>
                                             </li>
                                             @endforeach
+                                            @endif
                                         </ul>
 
 
