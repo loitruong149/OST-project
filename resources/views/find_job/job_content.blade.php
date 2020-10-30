@@ -2,14 +2,16 @@
 
 @section('content')
 
+
+@if (!$check)        
+{{-- phan dang nhap --}}
 <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog max-width-px-840 position-relative">
+    <div class="modal-dialog max-width-px-500 position-relative">
         <button type="button"
             class="circle-32 btn-reset bg-white pos-abs-tr mt-md-n6 mr-lg-n6 focus-reset z-index-supper"
             data-dismiss="modal"><i class="fas fa-times"></i></button>
         <div class="login-modal-main bg-white rounded-8 overflow-hidden">
             <div class="row no-gutters">
-                <h1>ban chua dang nhap</h1>
                     <div class="bg-white-2 h-100 px-11 pt-11 pb-7">
                         <div class="row">
                             <div class="col-4 col-xs-12">
@@ -61,12 +63,12 @@
                             <p class="font-size-4 text-center heading-default-color">Don’t have an account? <a
                                     href="" class="text-primary">Create a free account</a></p>
                         </form>
-                    </div>
-              
+                    </div>       
             </div>
         </div>
     </div>
 </div>
+@endif
 <div class="container" style="height: 650px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -78,7 +80,7 @@
                     </div>
                         <form method="POST" action="{{ route('apply') }}">
                             @csrf
-                            <a class="btn btn-transparent text-uppercase font-size-3 heading-default-color focus-reset"
+                            <a onclick="apply()" class="btn btn-primary text-uppercase font-size-3 heading-default-color focus-reset"
                             href="javacript:" data-toggle="modal" data-target="#login">
                             Apply
                         </a>
@@ -87,5 +89,13 @@
         </div>
     </div>
 </div>
-
+<script>
+ function apply(){
+     var count = $('span.count').html();
+     count++;
+     $('span.count').html(count);
+     console.log(count);
+ }
+</script>
 @endsection
+

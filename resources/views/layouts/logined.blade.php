@@ -129,13 +129,16 @@
                                 <i class="gr-cross-icon"></i>
                             </button>
                         </div>
-                        @if ($check)         
+
+
+
                         {{-- da dang nhap --}}
+                        {{-- <div id='logined'>
                         <div class="header-btn-devider ml-auto ml-lg-5 pl-2 d-none d-xs-flex align-items-center">
                             <div>
                               <a href="#" class="px-3 ml-7 font-size-7 notification-block flex-y-center position-relative">
                                 <i class="fas fa-bell heading-default-color"></i>
-                                <span class="font-size-3 count font-weight-semibold text-white bg-primary circle-24 border border-width-3 border border-white">0</span>
+                                <span class="font-size-3 count font-weight-semibold text-white bg-primary circle-24 border border-width-3 border border-white">3</span>
                               </a>
                             </div>
                             <div>
@@ -154,22 +157,28 @@
                               </div>
                             </div>
                           </div>
-                        </div>
-                        @else
-                        {{-- chua dang nhap --}}
-                        <div class="header-btns header-btn-devider ml-auto pr-2 ml-lg-6 d-none d-xs-flex">
+                        </div> --}}
+      
+                          {{-- chua dang nhap --}}
+                          <div id='login'>
+                          <div class="header-btns header-btn-devider ml-auto pr-2 ml-lg-6 d-none d-xs-flex">
                             <a class="btn btn-transparent text-uppercase font-size-3 heading-default-color focus-reset"
-                            href="javacript:" data-toggle="modal" data-target="#login">
+                                href="{{ route('login') }}" data-target="#login">
                                 Log in
                             </a>
-                            <a class="btn btn-primary text-uppercase font-size-3" href="javacript:" data-toggle="modal"
+                            <a class="btn btn-primary text-uppercase font-size-3" href="{{ route('register') }}"
                                 data-target="#signup">
                                 Sign up
                             </a>
-                        </div>
-                        @endif
-                        <!-- Mobile Menu Hamburger-->
-                        {{-- <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button"
+                            </div>
+                            </div>
+
+
+
+                        
+                                               
+                    <!-- Mobile Menu Hamburger-->
+                        <button class="navbar-toggler btn-close-off-canvas  hamburger-icon border-0" type="button"
                             data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <i class="icon icon-simple-remove icon-close"></i> 
@@ -178,7 +187,7 @@
                                     <span class="hamburger-inner"></span>
                                 </span>
                             </span>
-                        </button> --}}
+                        </button>
                         <!--/.Mobile Menu Hamburger Ends-->
                     </nav>
                 </div>
