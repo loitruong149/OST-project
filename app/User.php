@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
+   
 
     /**
      * The attributes that are mass assignable.
@@ -40,4 +41,22 @@ class User extends Authenticatable
     public function manage(){
         $this->Hasmany('App\Model\Manages');
     }
+
+    public function role(){
+        return $this->belongsTo('App\Role');
+    }
+
+    public function isAdmin(){
+        if($this->role->name == "admin"){
+
+            return true;
+        }
+
+        return false;
+    }
+
+   public function posts(){
+       return $this->hasMany('App\Model\Jobdetail');   
+   }
+
 }

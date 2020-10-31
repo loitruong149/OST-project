@@ -15,9 +15,10 @@ class CreateJobdetailsTable extends Migration
     {
         Schema::create('jobdetails', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
             $table->string('name');
             $table->string('image');
-            $table->string('content');
+            $table->text('content');
             $table->integer('jobtype_id')->unsigned();
             $table->foreign('jobtype_id')->references('id')->on('jobtypes');
             $table->timestamps();

@@ -49872,10 +49872,10 @@ __webpack_require__.r(__webpack_exports__);
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
   \*********************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/dist/cjs.js):\nTypeError: text.forEach is not a function\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\extract-text-webpack-plugin\\dist\\loader.js:145:16\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compiler.js:343:11\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compiler.js:681:15\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:22:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compiler.js:678:31\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:4:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1423:35\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:4:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1414:32\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:4:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1409:36\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:4:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1405:32\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:4:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at Compilation.seal (C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1342:27)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compiler.js:675:18\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1261:4\n    at AsyncSeriesHook.eval [as callAsync] (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:13:1)\n    at AsyncSeriesHook.lazyCompileHook (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\Hook.js:154:20)\n    at Compilation.finish (C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1253:28)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compiler.js:672:17\n    at eval (eval at create (C:\\xampp\\htdocs\\OST-project\\node_modules\\tapable\\lib\\HookCodeFactory.js:33:10), <anonymous>:9:1)\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1185:12\n    at C:\\xampp\\htdocs\\OST-project\\node_modules\\webpack\\lib\\Compilation.js:1097:9\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
 
 /***/ }),
 
@@ -49886,8 +49886,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ost004352\Desktop\Laravel\ost\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\ost004352\Desktop\Laravel\ost\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\OST-project\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\OST-project\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

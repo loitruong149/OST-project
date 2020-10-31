@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->integer('age')->default('25');
             $table->integer('phone')->default('123456789');
             $table->integer('class')->default('2');
+            $table->integer('role_id')->index()->unsigned()->nullable();
             $table->timestamps();
         });
     }

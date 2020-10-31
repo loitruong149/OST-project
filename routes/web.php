@@ -44,3 +44,14 @@ Auth::routes();
 Route::post('/apply', 'JobController@apply')->name('apply')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', function(){
+
+    return view('admin.index');
+});
+Route::resource('/admin/users', 'AdminUsersController');
+Route::resource('/admin/posts', 'AdminPostsController');
