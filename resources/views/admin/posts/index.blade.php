@@ -328,8 +328,7 @@
                       <td>{{$post->id}}</td>
                       <td>{{$post->name}}</td>
                       <td>{{$post->user->name}}</td>
-                      <td>{{$post->jobtype->id}}</td>
-                  
+                
                    
                   </tr>
         

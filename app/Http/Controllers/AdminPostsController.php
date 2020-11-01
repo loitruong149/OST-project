@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Http\Requests\PostsCreateRequest;
 use Illuminate\Http\Request;
 use App\Model\Jobdetail;
+use Illuminate\Support\Facades\Auth;
+use App\Photo;
 
 
 class AdminPostsController extends Controller
@@ -39,16 +40,34 @@ class AdminPostsController extends Controller
      */
     public function store(Request $request)
     {
+
+        $user = Auth::user();
+
+        if($file = $request->file('photo_id')){
+
+            $name = time().$file->getClientOriginalName(); // ten unique
+
+            $file->move('images', $name); 
+            $photo = Photo::create(['file' => $name]); 
+
+            $input['photo_id'] = $photo->id;
+        }
+
+          $user->posts()->create($input);
+
+          return redirect('/admin/posts');
+
+
+
         $request->validate([
             'name' => 'required',
-            'jobtype_id' => 'required',
+         //   'jobtype_id' => 'required',
             'photo_id' => 'required',
             'content' => 'required',
-        
 
         ]);
 
-       // return $request->all();
+        
     }
 
     /**
