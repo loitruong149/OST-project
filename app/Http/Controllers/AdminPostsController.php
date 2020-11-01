@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostsCreateRequest;
 use Illuminate\Http\Request;
 use App\Model\Jobdetail;
+
 
 class AdminPostsController extends Controller
 {
@@ -29,8 +31,6 @@ class AdminPostsController extends Controller
     {
         return view('admin.posts.create');
     }
-    
-
     /**
      * Store a newly created resource in storage.
      *
@@ -39,7 +39,16 @@ class AdminPostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'jobtype_id' => 'required',
+            'photo_id' => 'required',
+            'content' => 'required',
+        
+
+        ]);
+
+       // return $request->all();
     }
 
     /**

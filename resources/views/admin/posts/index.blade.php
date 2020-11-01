@@ -305,7 +305,7 @@
                     <!-- Nav Item - User Information -->
                     
             </nav>
-         <<h1>Posts</h1>
+         <h1>Posts</h1>
 
 
             <table class="table">
