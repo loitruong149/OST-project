@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PostsCreateRequest;
 use Illuminate\Http\Request;
 use App\Model\Jobdetail;
+use App\Model\Jobtype;
 use Illuminate\Support\Facades\Auth;
 use App\Photo;
-
+use App\User;
+use Illuminate\Support\Facades\File;
 
 class AdminPostsController extends Controller
 {
@@ -30,7 +32,9 @@ class AdminPostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+
+        $jobtypes = Jobtype::pluck('name','id')->all();
+        return view('admin.posts.create', compact('jobtypes'));
     }
     /**
      * Store a newly created resource in storage.
@@ -40,34 +44,38 @@ class AdminPostsController extends Controller
      */
     public function store(Request $request)
     {
-
+        
+        
         $user = Auth::user();
 
-        if($file = $request->file('photo_id')){
 
-            $name = time().$file->getClientOriginalName(); // ten unique
-
-            $file->move('images', $name); 
-            $photo = Photo::create(['file' => $name]); 
-
-            $input['photo_id'] = $photo->id;
-        }
-
-          $user->posts()->create($input);
-
-          return redirect('/admin/posts');
-
-
-
-        $request->validate([
+        $input= $request->validate([
             'name' => 'required',
-         //   'jobtype_id' => 'required',
+            'jobtype_id' => 'required',
             'photo_id' => 'required',
             'content' => 'required',
 
         ]);
 
-        
+        if($file = $request->file('photo_id')){
+
+
+            $name = time() . $file->getClientOriginalName();
+
+
+            $file->move('images', $name);
+
+            $photo = Photo::create(['file'=>$name]);
+
+
+            $input['photo_id'] = $photo->id;
+
+
+        }
+
+        $user->posts()->create($input);
+
+        return redirect('/admin/posts');
     }
 
     /**
@@ -89,7 +97,10 @@ class AdminPostsController extends Controller
      */
     public function edit($id)
     {
-      return view('admin.posts.edit');
+
+      $post = Jobdetail::find($id);
+      $jobtypes = Jobtype::pluck('name','id')->all();
+      return view('admin.posts.edit', compact('post', 'jobtypes'));
     }
 
     /**
@@ -101,7 +112,35 @@ class AdminPostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+          
+        $input= $request->validate([
+            'name' => 'required',
+            'jobtype_id' => 'required',
+            'photo_id' => 'required',
+            'content' => 'required',
+
+        ]);
+
+        if($file = $request->file('photo_id')){
+
+
+            $name = time() . $file->getClientOriginalName();
+
+
+            $file->move('images', $name);
+
+            $photo = Photo::create(['file'=>$name]);
+
+
+            $input['photo_id'] = $photo->id;
+
+
+        }
+       
+        Auth::user()->posts()->whereId($id)->first()->update($input);
+       
+
+        return redirect('/admin/posts');
     }
 
     /**
@@ -112,6 +151,17 @@ class AdminPostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //$user = Auth::user();
+        $post = Jobdetail::find($id);
+    
+    
+        //$post = Jobdetail::findOrFail($id);
+
+        unlink(public_path() . $post->photo->file);
+        $post->photo()->delete();
+        $post->delete(); 
+
+        return redirect('/admin/posts');
+        
     }
 }

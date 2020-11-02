@@ -6,10 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jobdetail extends Model
 {
-    //
-    protected $fillable =[
-        'name', 'image', 'content', 'jobtype_id', 'photo_id'
+ 
+
+
+    protected $fillable = [
+
+        'jobtype_id',
+        'photo_id',
+        'name',
+        'content'
+
+
+
     ];
+
+  
+    
     public function jobtypes(){
         return $this->belongsTo(Jobtype::class,'id','jobtype_id');
     }

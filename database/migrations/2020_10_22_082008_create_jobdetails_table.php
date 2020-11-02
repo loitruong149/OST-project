@@ -17,11 +17,14 @@ class CreateJobdetailsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->integer('photo_id')->unsigned()->index();
+            $table->integer('jobtype_id')->unsigned()->index();
             $table->string('name');
             $table->text('content');
-            $table->integer('jobtype_id')->unsigned();
-            $table->foreign('jobtype_id')->references('id')->on('jobtypes');
+
+         
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

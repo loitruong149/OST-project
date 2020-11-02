@@ -32,9 +32,8 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
             </div>
-            <div class="sidebar-brand-text mx-3"> Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3"> Admin </div>
         </a>
 
         <!-- Divider -->
@@ -58,25 +57,8 @@
         <!-- Nav Item - Pages Collapse Menu -->
         <x-admin-sidebar-posts-links></x-admin-sidebar-posts-links>
 
-   
-
-
-
-
         <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
-                <span>Quan Ly Users</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Quan ly :</h6>
-                <a class="collapse-item" href="">All Users</a>
 
-                </div>
-            </div>
-        </li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -86,12 +68,41 @@
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Quan ly :</h6>
-                    <a class="collapse-item" href="utilities-color.html">All Posts</a>
-                    <a class="collapse-item" href="utilities-border.html">Add Post</a>
+                    <a class="collapse-item" href="{{route('posts.index')}}">All Posts</a>
+                    <a class="collapse-item" href="{{route('posts.create')}}">Add Post</a>
                     
                 </div>
             </div>
         </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Quan Ly Users</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Quan ly :</h6>
+                <a class="collapse-item" href="{{route('users.index')}}">All Users</a>
+
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Quan Ly Jobtypes</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Quan ly :</h6>
+                    <a class="collapse-item" href="utilities-color.html">All Jobtypes</a>
+                    <a class="collapse-item" href="utilities-border.html">Add Jobtype</a>
+                    
+                </div>
+            </div>
+        </li>
+       
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -303,7 +314,7 @@
                     <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
-                    <x-admin-top-navbar-user-information></x-admin-top-navbar-user-information>
+
 
                 </ul>
 

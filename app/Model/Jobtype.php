@@ -15,5 +15,7 @@ class Jobtype extends Model
     public function jobdetails(){
         return $this->hasMany(Jobdetail::class,'jobtype_id','id');
     }
+
+    
     
 }
