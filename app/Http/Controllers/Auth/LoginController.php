@@ -35,12 +35,11 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        $this->redirectTo = url()->previous();
         $this->middleware('guest')->except('logout');
     }
     public function showLoginForm(){
-        return $this->returnWithHearderData('auth.login',[
-
-        ]);
+        return $this->returnWithHearderData('auth.login',[]);
     }
-    
+   
 }
