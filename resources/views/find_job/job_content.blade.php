@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-
 @if (!$check)        
 <!-- Login Modal -->
 <div class="modal fade form-modal" id="login" tabindex="-1" aria-hidden="true">
@@ -75,8 +73,8 @@
                                 <button type="submit" class="btn btn-primary btn-medium w-100 rounded-5 text-uppercase">Log in
                                 </button>
                             </div>
-                            <p class="font-size-4 text-center heading-default-color">Don’t have an account? <a
-                                    href="" class="text-primary">Create a free account</a></p>
+                            <p class="font-size-4 text-center heading-default-color">Don’t have an account? 
+                              <a  onclick="modelOpen()" href="javacript:" data-toggle="modal" data-target="#signup" class="text-primary" data-dismiss="modal">Create a free account</a></p>
                         </form>
                     </div>       
             </div>
@@ -158,7 +156,7 @@
                 <div class="form-group mb-8">
                   <button type="submit" class="btn btn-primary btn-medium w-100 rounded-5 text-uppercase">Sign Up </button>
                 </div>
-                <p class="font-size-4 text-center heading-default-color">Don’t have an account? <a href="" class="text-primary">Create a free account</a></p>
+                {{-- <p class="font-size-4 text-center heading-default-color">Don’t have an account? <a href="" class="text-primary">Create a free account</a></p> --}}
               </form>
           </div>
         </div>
@@ -195,8 +193,8 @@
                     <!-- media logo end -->
                     <!-- media texts start -->
                     <div>
-                      <h3 class="font-size-6 mb-0">Product Designer</h3>
-                      <span class="font-size-3 text-gray line-height-2">AirBnb</span>
+                      <h3 class="font-size-6 mb-0">{{$jobdetail->name}}</h3>
+                      {{-- <span class="font-size-3 text-gray line-height-2">name</span> --}}
                     </div>
                     <!-- media texts end -->
                   </div>
@@ -223,7 +221,7 @@
                     <div class="image mr-5">
                       <img src="{{asset('./image/svg/icon-dolor.svg')}}" alt="">
                     </div>
-                    <p class="font-weight-semibold font-size-5 text-black-2 mb-0">80-90K PLN</p>
+                    <p class="font-weight-semibold font-size-5 text-black-2 mb-0">80-90K</p>
                   </div>
                 </div>
                 <div class="col-md-4 pr-lg-0 pl-lg-10 mb-md-0 mb-6">
@@ -239,8 +237,7 @@
                     <div class="image mr-5">
                       <img src="{{asset('./image/svg/icon-location.svg')}}" alt="">
                     </div>
-                    <p class="font-size-5 text-gray mb-0">777 Brockton Avenue, <br class="d-md-none d-lg-block d-block">
-                                          Abington MA 2351</p>
+                    <p class="font-weight-semibold font-size-5 text-black-2 mb-0">Tokyo</p>
                   </div>
                 </div>
               </div>
@@ -248,7 +245,7 @@
                 <div class="col-md-4 mb-lg-0 mb-10">
                   <div class="">
                     <span class="font-size-4 d-block mb-4 text-gray">Career Level</span>
-                    <h6 class="font-size-5 text-black-2 font-weight-semibold mb-9">Project Manangement</h6>
+                    <h6 class="font-size-5 text-black-2 font-weight-semibold mb-9">PM, PL</h6>
                   </div>
                   <div class="tags">
                     <p class="font-size-4 text-gray mb-0">Soft Skill</p>
@@ -259,34 +256,15 @@
                       <li class="d-block font-size-4 text-black-2 mt-2">
                         <span class="d-inline-block mr-2">•</span>Basic English
                       </li>
-                      <li class="d-block font-size-4 text-black-2 mt-2">
-                        <span class="d-inline-block mr-2">•</span>Well Organized
-                      </li>
                     </ul>
                   </div>
                 </div>
                 <div class="col-md-4 pr-lg-0 pl-lg-10 mb-lg-0 mb-8">
-                  <div class="">
-                    <span class="font-size-4 d-block mb-4 text-gray">Type of corporation</span>
-                    <h6 class="font-size-5 text-black-2 font-weight-semibold mb-9">B2B & B2C</h6>
-                  </div>
                   <div class="tags">
                     <p class="font-size-4 text-gray mb-3">Technical Skill</p>
                     <ul class="d-flex list-unstyled flex-wrap pr-sm-25 pr-md-0">
                       <li class="bg-regent-opacity-15 mr-3 h-px-33 text-center flex-all-center rounded-3 px-5 font-size-3 text-black-2 mt-2">
                         Editing
-                      </li>
-                      <li class="bg-regent-opacity-15 mr-3 h-px-33 text-center flex-all-center rounded-3 px-5 font-size-3 text-black-2 mt-2">
-                        Wire-framing
-                      </li>
-                      <li class="bg-regent-opacity-15 mr-md-0 mr-3 h-px-33 text-center flex-all-center rounded-3 px-5 font-size-3 text-black-2 mt-2">
-                        XD
-                      </li>
-                      <li class="bg-regent-opacity-15 mr-3 h-px-33 text-center flex-all-center rounded-3 px-5 font-size-3 text-black-2 mt-2">
-                        User Persona
-                      </li>
-                      <li class="bg-regent-opacity-15 mr-3 h-px-33 text-center flex-all-center rounded-3 px-5 font-size-3 text-black-2 mt-2">
-                        Sketch
                       </li>
                     </ul>
                   </div>
@@ -309,11 +287,11 @@
                         {{$jobdetail->content}}
                     </div>
                   <div class="">
-                    <span class="font-size-4 font-weight-semibold text-black-2 mb-7">Your Role:</span>
-                    <p class="font-size-4 text-black-2 mb-7">We’re looking for a passionate individual to design beautiful and functional products for our
-                      customers at Gubagoo. We move very fast and you will be expected to contribute to a cross-functional product development squad,
-                      that includes product managers and developers, to deliver the UX and UI for the team to bring to life. </p>
-                    <p class="font-size-4 text-black-2 mb-7">We are serious about remote work. You can work for from anywhere. </p>
+                    <p class="font-size-4 text-black-2 mb-7">Generate Lorem Ipsum placeholder text for use in your graphic, print and web layouts,
+                       and discover plugins for your favorite writing, design and blogging tools..Lorem Ipsum placeholder text for use in your graphic, print and web layouts,
+                       and discover plugins for your favorite writing, design and blogging tools. </p>
+                    <p class="font-size-4 text-black-2 mb-7">Lorem Ipsum placeholder text for use in your graphic, print and web layouts,
+                      and discover plugins for your favorite writing, design and blogging tools..</p>
                     <form method="POST" action="{{ route('apply') }}">
                         @csrf
                             <a id = "disabled" onclick="apply()" class="btn btn-green text-uppercase btn-medium w-180 h-px-48 rounded-3 mr-4 mt-6 focus-reset" 
@@ -339,6 +317,9 @@
      console.log(count);
      }
  }
+function modelOpen(){
+  $("body").addClass("modal-open");
+}
 </script>
 @endsection
 

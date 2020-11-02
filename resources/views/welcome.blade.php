@@ -163,7 +163,7 @@
     </div>
   </div>        
 <!-- Hero Area -->
-<div class="position-relative z-index-1  mt-25 mt-md-15 mt-lg-0 mt-xl-22"></div>
+<div class="position-relative z-index-1  mt-25 mt-md-15 mt-lg-0 mt-xl-20"></div>
 
 <!-- Gioi thieu ve trang web -->
 <div class="pt-11 pt-lg-20 pb-7 pb-lg-18">
@@ -232,72 +232,115 @@
     </div>
 </div>
 
-<!-- New job -->
-<div class="bg-default-2 pt-12 pt-lg-25 pb-12 pb-lg-25">
-    <div class="container">
-        <!-- Section title -->
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 col-xxl-5">
-                <div class="text-center mb-8 mb-lg-18 px-xl-9 px-xxl-7">
-                    <h2 class="font-size-9 mb-6">
-                        @foreach ($job_engineer as $item)
-                        {{strtoupper($item->name)}} Job</h2>
-                        @endforeach
-                    </div>
-            </div>
-        </div>
-        <!-- End Section title -->
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">                    
-            
-            @foreach ($job_engineer as $item)
-            @foreach ($item->jobdetails as $jobdetail)
-            
-            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-11 mb-9">
-                <!-- Single Featured Job -->
-                <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3">
-                    <div class="media align-items-center">
-                        <div class="square-52 bg-yellow-2 mr-8 rounded">
-                            <a href="#"><img src="./image/svg/text-K.svg" alt=""></a>
-                        </div>
-                        <div>
-                            <a href="#" class="font-size-3 text-default-color line-height-2">Job 1</a>
-                            <h3 class="font-size-6 mb-0"><a class="heading-default-color font-weight-semibold"
-                            href="#">{{$jobdetail->name}}</a></h3>
-                            </div>
-                        </div>
-                        <div class="d-flex pt-17">
-                            <ul class="list-unstyled mb-1 d-flex flex-wrap">
-                                <li>
-                                    <a href="#"
-                                    class="bg-regent-opacity-15 text-denim font-size-3 rounded-3 min-width-px-100 px-3 flex-all-center mr-6 h-px-33 mt-4">
-                                    <i class="icon icon-pin-3 mr-2 font-weight-bold"></i> Tokyo
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                class="bg-regent-opacity-15 text-orange font-size-3 rounded-3 min-width-px-100 px-3 flex-all-center mr-6 h-px-33 mt-4">
-                                <i class="fa fa-briefcase mr-2 font-weight-bold"></i> Full-time
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="javascript:"
-                    class="bookmark-button toggle-item font-size-6 ml-auto line-height-reset px-0 mt-6 text-default-color  ">
-                </a>
-            </div>
-        </div>
-        <!-- End Single Featured Job -->
+<!-- Company Area End -->
+<div class="">
+  <div class="container">
+    <hr class="pt-13 pt-lg-20">
+    <!-- Section Top -->
+    <div class="row align-items-center justify-content-center">
+      <!-- Section Title -->
+      <div class="col-12 col-xl-6 col-lg-7 col-md-9">
+        <div class="text-center mb-12 mb-lg-17">
+          <h2 class="font-size-10 font-weight-bold mb-8">Explore by category</h2>
+      </div>
     </div>
-    @endforeach
-    @endforeach
-        </div>
-        <div class="row">
-            <div class="col-12 text-center pt-md-11 ">
-                <a class="text-green font-weight-bold text-uppercase font-size-3" href="#">See more
-                    <i class="fas fa-arrow-right ml-3"></i>
-                </a>
-            </div>
-        </div>
+    <!-- End Section Top -->
+    <div class="row justify-content-center" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+      <!-- Single Category -->
+      <div class="col-12 col-xl-4 col-lg-4 col-sm-6 col-xs-8">
+        <a href="#" class="bg-white border border-color-2 rounded-4 pl-5 pt-10 pb-3 px-2 hover-shadow-2 mb-9 d-block w-100 text-center">
+          <div class="text-white bg-blue square-70 rounded-4 mb-7 font-size-7 text-center mx-auto">
+            <i class="fa fa-briefcase"></i>
+          </div>
+          <!-- Category Content -->
+          <div class="">
+            <h5 class="font-size-5 font-weight-semibold text-black-2 line-height-1">介護</h5>
+            <p class="font-size-4 font-weight-normal text-gray"><span>415</span> Job</p>
+          </div>
+        </a>
+      </div>
+      <!-- End Single Category -->
+      <!-- Single Category -->
+      <div class="col-12 col-xl-4 col-lg-4 col-sm-6 col-xs-8">
+        <a href="#" class="bg-white border border-color-2 rounded-4 pl-5 pt-10 pb-3 px-2 hover-shadow-2 mb-9 d-block w-100 text-center">
+          <div class="text-white bg-spray square-70 rounded-4 mb-7 font-size-7 text-center mx-auto">
+            <i class="fa fa-headset"></i>
+          </div>
+          <!-- Category Content -->
+          <div class="">
+            <h5 class="font-size-5 font-weight-semibold text-black-2 line-height-1">エンジニア</h5>
+            <p class="font-size-4 font-weight-normal text-gray"><span>415</span> Job</p>
+          </div>
+        </a>
+      </div>
+      <!-- End Single Category -->
+      <!-- Single Category -->
+      <div class="col-12 col-xl-4 col-lg-4 col-sm-6 col-xs-8">
+        <a href="#" class="bg-white border border-color-2 rounded-4 pl-5 pt-10 pb-3 px-2 hover-shadow-2 mb-9 d-block w-100 text-center">
+          <div class="text-white bg-coral square-70 rounded-4 mb-7 font-size-7 text-center mx-auto">
+            <i class="fa fa-layer-group"></i>
+          </div>
+          <!-- Category Content -->
+          <div class="">
+            <h5 class="font-size-5 font-weight-semibold text-black-2 line-height-1">特定技能</h5>
+            <p class="font-size-4 font-weight-normal text-gray"><span>415</span> Job</p>
+          </div>
+        </a>
+      </div>
+      <!-- End Single Category -->
+      <!-- Single Category -->
+      <div class="col-12 col-xl-4 col-lg-4 col-sm-6 col-xs-8">
+        <a href="#" class="bg-white border border-color-2 rounded-4 pl-5 pt-10 pb-3 px-2 hover-shadow-2 mb-9 d-block w-100 text-center">
+          <div class="text-white bg-red square-70 rounded-4 mb-7 font-size-7 text-center mx-auto">
+            <i class="fa fa-pen-nib"></i>
+          </div>
+          <!-- Category Content -->
+          <div class="">
+            <h5 class="font-size-5 font-weight-semibold text-black-2 line-height-1">Design</h5>
+            <p class="font-size-4 font-weight-normal text-gray"><span>415</span> Job</p>
+          </div>
+        </a>
+      </div>
+      <!-- End Single Category -->
+      <!-- Single Category -->
+      <div class="col-12 col-xl-4 col-lg-4 col-sm-6 col-xs-8">
+        <a href="#" class="bg-white border border-color-2 rounded-4 pl-5 pt-10 pb-3 px-2 hover-shadow-2 mb-9 d-block w-100 text-center">
+          <div class="text-white bg-orange square-70 rounded-4 mb-7 font-size-7 text-center mx-auto">
+            <i class="fa fa-rocket"></i>
+          </div>
+          <!-- Category Content -->
+          <div class="">
+            <h5 class="font-size-5 font-weight-semibold text-black-2 line-height-1">Marketing &amp; Management</h5>
+            <p class="font-size-4 font-weight-normal text-gray"><span>415</span> Job</p>
+          </div>
+        </a>
+      </div>
+      <!-- End Single Category -->
+      <!-- Single Category -->
+      <div class="col-12 col-xl-4 col-lg-4 col-sm-6 col-xs-8">
+        <a href="#" class="bg-white border border-color-2 rounded-4 pl-5 pt-10 pb-3 px-2 hover-shadow-2 mb-9 d-block w-100 text-center">
+          <div class="text-white bg-yellow square-70 rounded-4 mb-7 font-size-7 text-center mx-auto">
+            <i class="fa fa-location-arrow"></i>
+          </div>
+          <!-- Category Content -->
+          <div class="">
+            <h5 class="font-size-5 font-weight-semibold text-black-2 line-height-1">Sales &amp; Communication</h5>
+            <p class="font-size-4 font-weight-normal text-gray"><span>415</span> Job</p>
+          </div>
+        </a>
+      </div>
+      <!-- End Single Category -->
+      
     </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center pt-5 pt-lg-13">
+          <a class="btn btn-outline-black-2 btn-lg text-uppercase" href="#">Explore All</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 </section>
@@ -308,12 +351,13 @@
     <!-- Section Title -->
     <div class="row justify-content-center mb-lg-16 mb-11">
       <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-10 text-center">
-        <h2 class="mb-6 mb-lg-7 text-black-2 font-size-10">Featured Jobs</h2>
-        <p class="px-xs-3 px-md-12 px-lg-8 px-xl-8 px-xxl-6 font-size-5 mb-0">Leverage agile frameworks to provide a robust synopsis for high level overviews to start.</p>
+        <h2 class="mb-6 mb-lg-7 text-black-2 font-size-10">New Jobs</h2>
       </div>
     </div>
     <!-- Section Title End -->
     <div class="row justify-content-center">
+      @foreach ($job_engineer as $item)
+            @foreach ($item->jobdetails as $jobdetail)
       <div class="col-xxl-9 col-xl-9 col-lg-10 mb-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
         <!-- Single Featured Job -->
         <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3 ">
@@ -321,21 +365,21 @@
             <div class="col-md-6">
               <div class="media align-items-center">
                 <div class="square-72 d-block mr-8">
-                  <img src="./image/l2/png/featured-job-logo-1.png" alt="">
+                  <img src="{{asset('./image/l2/png/featured-job-logo-1.png')}}" alt="">
                 </div>
                 <div>
-                  <h3 class="mb-0"><a class="font-size-6 heading-default-color" href="#">UI/UX Designer</a></h3>
-                  <a href="#" class="font-size-3 text-default-color line-height-2">Apple INC</a>
+                  <h3 class="mb-0"><a class="font-size-6 heading-default-color" href="/find_job/job_content/{{$jobdetail->id}}">{{$jobdetail->name}}</a></h3>
+                  <a href="#" class="font-size-3 text-default-color line-height-2">{{$item->name}}</a>
                 </div>
               </div>
             </div>
             <div class="col-md-6 text-right pt-7 pt-md-5">
               <div class="media justify-content-md-end">
                 <div class="image mr-5 mt-2">
-                  <img src="./image/svg/icon-fire-rounded.svg" alt="">
+                  <img src="{{asset('./image/svg/icon-fire-rounded.svg')}}" alt="">
                 </div>
                 <p class="font-weight-bold font-size-7 text-hit-gray mb-0"><span
-                    class="text-black-2">120-150K</span> PLN</p>
+                    class="text-black-2">120-150K</span></p>
               </div>
             </div>
           </div>
@@ -356,15 +400,15 @@
             <div class="col-md-5">
               <ul class="d-flex list-unstyled mr-n3 flex-wrap mr-n8 justify-content-md-end">
                 <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-loaction-pin-black.svg" alt=""></span>
-                  <span class="font-weight-semibold">Berlyn, UK</span>
+                  <span class="mr-4" style="margin-top: -2px"><img src="{{asset('./image/svg/icon-loaction-pin-black.svg')}}" alt=""></span>
+                  <span class="font-weight-semibold">Tokyo</span>
                 </li>
                 <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-suitecase.svg" alt=""></span>
+                  <span class="mr-4" style="margin-top: -2px"><img src="{{asset('./image/svg/icon-suitecase.svg')}}" alt=""></span>
                   <span class="font-weight-semibold">Full-time</span>
                 </li>
                 <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-clock.svg" alt=""></span>
+                  <span class="mr-4" style="margin-top: -2px"><img src="{{asset('./image/svg/icon-clock.svg')}}" alt=""></span>
                   <span class="font-weight-semibold">9d ago</span>
                 </li>
               </ul>
@@ -373,242 +417,8 @@
         </div>
         <!-- End Single Featured Job -->
       </div>
-      <div class="col-xxl-9 col-xl-9 col-lg-10 mb-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-        <!-- Single Featured Job -->
-        <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3 ">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="media align-items-center">
-                <div class="square-72 d-block mr-8">
-                  <img src="./image/l2/png/featured-job-logo-2.png" alt="">
-                </div>
-                <div>
-                  <h3 class="mb-0"><a class="font-size-6 heading-default-color" href="#">UI/UX Designer</a></h3>
-                  <a href="#" class="font-size-3 text-default-color line-height-2">Apple INC</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-right pt-7 pt-md-5">
-              <div class="media justify-content-md-end">
-                <div class="image mr-5 mt-2">
-                  <img src="./image/svg/icon-fire-rounded.svg" alt="">
-                </div>
-                <p class="font-weight-bold font-size-7 text-hit-gray mb-0"><span
-                    class="text-black-2">120-150K</span> PLN</p>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-8">
-            <div class="col-md-7">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap">
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Agile</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Wireframing</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Prototyping</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-5">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap mr-n8 justify-content-md-end">
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-loaction-pin-black.svg" alt=""></span>
-                  <span class="font-weight-semibold">Berlyn, UK</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-suitecase.svg" alt=""></span>
-                  <span class="font-weight-semibold">Full-time</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-clock.svg" alt=""></span>
-                  <span class="font-weight-semibold">9d ago</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- End Single Featured Job -->
-      </div>
-      <div class="col-xxl-9 col-xl-9 col-lg-10 mb-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-        <!-- Single Featured Job -->
-        <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3 ">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="media align-items-center">
-                <div class="square-72 d-block mr-8">
-                  <img src="./image/l2/png/featured-job-logo-3.png" alt="">
-                </div>
-                <div>
-                  <h3 class="mb-0"><a class="font-size-6 heading-default-color" href="#">iOS Developer</a></h3>
-                  <a href="#" class="font-size-3 text-default-color line-height-2">Shopify</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-right pt-7 pt-md-5">
-              <div class="media justify-content-md-end">
-                <div class="image mr-5 mt-2">
-                  <img src="./image/svg/icon-fire-rounded.svg" alt="">
-                </div>
-                <p class="font-weight-bold font-size-7 text-hit-gray mb-0"><span
-                    class="text-black-2">100-120K</span> PLN</p>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-8">
-            <div class="col-md-7">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap">
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Swift</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Objective C</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">X Code</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-5">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap mr-n8 justify-content-md-end">
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-loaction-pin-black.svg" alt=""></span>
-                  <span class="font-weight-semibold">Berlyn, UK</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-suitecase.svg" alt=""></span>
-                  <span class="font-weight-semibold">Full-time</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-clock.svg" alt=""></span>
-                  <span class="font-weight-semibold">9d ago</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- End Single Featured Job -->
-      </div>
-      <div class="col-xxl-9 col-xl-9 col-lg-10 mb-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-        <!-- Single Featured Job -->
-        <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3 ">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="media align-items-center">
-                <div class="square-72 d-block mr-8">
-                  <img src="./image/l2/png/featured-job-logo-4.png" alt="">
-                </div>
-                <div>
-                  <h3 class="mb-0"><a class="font-size-6 heading-default-color" href="#">Creative Director</a></h3>
-                  <a href="#" class="font-size-3 text-default-color line-height-2">Facebook</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-right pt-7 pt-md-5">
-              <div class="media justify-content-md-end">
-                <div class="image mr-5 mt-2">
-                  <img src="./image/svg/icon-fire-rounded.svg" alt="">
-                </div>
-                <p class="font-weight-bold font-size-7 text-hit-gray mb-0"><span
-                    class="text-black-2">80-90K</span> PLN</p>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-8">
-            <div class="col-md-7">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap">
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Agile</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Wireframing</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">Prototyping</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-5">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap mr-n8 justify-content-md-end">
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-loaction-pin-black.svg" alt=""></span>
-                  <span class="font-weight-semibold">Berlyn, UK</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-suitecase.svg" alt=""></span>
-                  <span class="font-weight-semibold">Full-time</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-clock.svg" alt=""></span>
-                  <span class="font-weight-semibold">9d ago</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- End Single Featured Job -->
-      </div>
-      <div class="col-xxl-9 col-xl-9 col-lg-10 mb-8" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-        <!-- Single Featured Job -->
-        <div class="pt-9 px-xl-9 px-lg-7 px-7 pb-7 light-mode-texts bg-white rounded hover-shadow-3 ">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="media align-items-center">
-                <div class="square-72 d-block mr-8">
-                  <img src="./image/l2/png/featured-job-logo-5.png" alt="">
-                </div>
-                <div>
-                  <h3 class="mb-0"><a class="font-size-6 heading-default-color" href="#">Software Engineer</a></h3>
-                  <a href="#" class="font-size-3 text-default-color line-height-2">Oculus</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 text-right pt-7 pt-md-5">
-              <div class="media justify-content-md-end">
-                <div class="image mr-5 mt-2">
-                  <img src="./image/svg/icon-fire-rounded.svg" alt="">
-                </div>
-                <p class="font-weight-bold font-size-7 text-hit-gray mb-0"><span
-                    class="text-black-2">80-90K</span> PLN</p>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-8">
-            <div class="col-md-7">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap">
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">C++</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">JavaScprit</a>
-                </li>
-                <li>
-                  <a class="bg-regent-opacity-15 min-width-px-96 mr-3 text-center rounded-3 px-6 py-1 font-size-3 text-black-2 mt-2" href="#">ReactJS</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-5">
-              <ul class="d-flex list-unstyled mr-n3 flex-wrap mr-n8 justify-content-md-end">
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-loaction-pin-black.svg" alt=""></span>
-                  <span class="font-weight-semibold">Berlyn, UK</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-suitecase.svg" alt=""></span>
-                  <span class="font-weight-semibold">Full-time</span>
-                </li>
-                <li class="mt-2 mr-8 font-size-small text-black-2 d-flex">
-                  <span class="mr-4" style="margin-top: -2px"><img src="./image/svg/icon-clock.svg" alt=""></span>
-                  <span class="font-weight-semibold">9d ago</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- End Single Featured Job -->
-      </div>
+      @endforeach
+    @endforeach
     </div>
   </div>
 </section>

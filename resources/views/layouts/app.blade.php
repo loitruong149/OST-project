@@ -298,8 +298,24 @@
             </div> --}}
         </footer>
         <!-- footer area function end -->
+      <a class="on_top" href="#top" style="display: block;"><i class="fa-arrow-circle-up fa"></i></a>
       </div>
     </div>
+    <script>
+      $(document).ready(function(){
+          $(window).scroll(function(){
+              if ($(this).scrollTop() > 300) {
+                  $('#on_top').fadeIn();
+              } else {
+                  $('#on_top').fadeOut();
+              }
+          });
+          $('#on_top').click(function(){
+              $("html, body").animate({ scrollTop: 0 }, 600);
+              return false;
+          });
+      });
+    </script>
     <!-- Vendor Scripts -->
     <script src="{{ asset('js/vendor.min.js') }}"></script>
     `
@@ -315,5 +331,24 @@
     <script src="{{ asset('js/drag-n-drop.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
 </body>
-
+<style>
+  a.on_top { opacity:0.6; display: none;}
+a.on_top:hover{
+background-color: #00b074;
+color: #fff;
+border: 1px solid #00b074;
+opacity:1;
+}
+a.on_top i{ font-size: 20px;}
+a.on_top {
+border-radius: 6px;
+background-color: #333333;
+padding: 10px 20px;
+white-space: nowrap; color: #fff;
+position: fixed;
+bottom: 75px;
+right: 30px;
+height: 44px;
+}
+</style>
 </html>
